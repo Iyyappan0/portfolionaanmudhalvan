@@ -55,7 +55,8 @@ section {
   margin-top: 20px;
 }
 
-.skill {
+/* Use .skill-btn consistently */
+.skill-btn {
   background: #111;
   padding: 15px;
   text-align: center;
@@ -63,11 +64,13 @@ section {
   font-weight: bold;
   transition: 0.3s;
   cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #e5e5e5;
 }
 
-.skill:hover {
+.skill-btn:hover {
   background: #0f0f0f;
-  transform: scale(1.1);
+  transform: scale(1.08);
   box-shadow: 0 0 15px #00ffe0, 0 0 30px #00ffe0;
 }
 
@@ -125,12 +128,16 @@ section {
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .contact-btn:hover {
   box-shadow: 0 0 15px #00ffe0, 0 0 30px #00ffe0;
 }
 
+/* Feed-in animation */
 footer {
   text-align: center;
   padding: 20px;
@@ -138,7 +145,7 @@ footer {
   color: #888;
 }
 
-.section-title, .skill, .project-card, .contact-btn {
+.section-title, .skill-btn, .project-card, .contact-btn {
   opacity: 0;
   transform: translateY(30px);
   transition: all 0.6s ease-out;
@@ -150,6 +157,7 @@ footer {
 }
 
 
+/* Contact button color variants */
 .contact-btn.instagram {
   background: black;
   color: #ff2ea1;
@@ -161,7 +169,6 @@ footer {
   color: black;
   box-shadow: 0 0 20px #ff2ea1, 0 0 40px #ff2ea1, 0 0 60px #ff2ea1;
 }
-
 
 .contact-btn.whatsapp {
   background: black;
@@ -175,7 +182,6 @@ footer {
   box-shadow: 0 0 20px #25D366, 0 0 40px #25D366, 0 0 60px #25D366;
 }
 
-
 .contact-btn.github {
   background: black;
   color: white;
@@ -187,7 +193,6 @@ footer {
   color: black;
   box-shadow: 0 0 20px white, 0 0 40px white, 0 0 60px white;
 }
-
 
 .contact-btn.email {
   background: black;
@@ -207,13 +212,13 @@ footer {
   border: 1px solid #016436;
   box-shadow: 0 0 15px #016536, 0 0 30px #016033;
 }
-
 .contact-btn.phone:hover {
   background: #004324;
   color: black;
   box-shadow: 0 0 20px #1e6c32, 0 0 40px #014123, 0 0 60px #005a30;
 }
 
+/* Skill button color variations */
 .skill-btn.html {
   background: black;
   color: #ff6600;
@@ -225,7 +230,6 @@ footer {
   color: black;
   box-shadow: 0 0 20px #ff6600, 0 0 40px #ff6600, 0 0 60px #ff6600;
 }
-
 
 .skill-btn.css {
   background: black;
@@ -239,7 +243,6 @@ footer {
   box-shadow: 0 0 20px #0099ff, 0 0 40px #0099ff, 0 0 60px #0099ff;
 }
 
-
 .skill-btn.js {
   background: black;
   color: #ffcc00;
@@ -251,7 +254,6 @@ footer {
   color: black;
   box-shadow: 0 0 20px #ffcc00, 0 0 40px #ffcc00, 0 0 60px #ffcc00;
 }
-
 
 .skill-btn.react {
   background: black;
@@ -265,7 +267,6 @@ footer {
   box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff, 0 0 60px #00ffff;
 }
 
-
 .skill-btn.tailwind {
   background: black;
   color: #4f46e5;
@@ -277,7 +278,6 @@ footer {
   color: white;
   box-shadow: 0 0 20px #4f46e5, 0 0 40px #4f46e5, 0 0 60px #4f46e5;
 }
-
 
 .skill-btn.python {
   background: black;
@@ -291,8 +291,6 @@ footer {
   box-shadow: 0 0 20px #00ff66, 0 0 40px #00ff66, 0 0 60px #00ff66;
 }
 
-
-
 .skill-btn.ps {
   background: black;
   color: #31a8ff;
@@ -304,7 +302,6 @@ footer {
   color: black;
   box-shadow: 0 0 20px #31a8ff, 0 0 40px #31a8ff, 0 0 60px #31a8ff;
 }
-
 
 .skill-btn.photo {
   background: black;
@@ -318,7 +315,6 @@ footer {
   box-shadow: 0 0 20px #ff1744, 0 0 40px #ff1744, 0 0 60px #ff1744;
 }
 
-
 .skill-btn.video {
   background: black;
   color: #d500f9;
@@ -329,4 +325,11 @@ footer {
   background: #d500f9;
   color: white;
   box-shadow: 0 0 20px #d500f9, 0 0 40px #d500f9, 0 0 60px #d500f9;
+}
+
+/* Responsive tweaks */
+@media (max-width: 560px) {
+  .tagline { font-size: 1rem; }
+  .section-title { font-size: 1.5rem; }
+  .skills-grid { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
 }
